@@ -11,7 +11,7 @@ class MySlider extends StatefulWidget {
   double maxSlide;
   int division;
   String valueName;
-  double result = 10; //! значение должно быть середина слайдера.
+  //double result = 10; //! значение должно быть середина слайдера.
 
   MySlider(
       {this.countSlider,
@@ -121,7 +121,7 @@ class _MySliderState extends State<MySlider> {
   }
 
   void buttonAdd() {
-    countSlider += countSlider;
+    countSlider += stepCount;
     if (countSlider > maxSlide) {
       countSlider = maxSlide;
     }
