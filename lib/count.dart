@@ -1,7 +1,7 @@
 class Count {
   static var slideStartAlchocol = 5.0;
   static var sliderAlchocolMain = 15.0;
-  static var sliderAlchocolEnd = 1.0;
+  static var sliderAlchocolEnd = 25.0;
 
   //! начальные значения этих переменных должны быть серединой слайдера
 
@@ -11,7 +11,6 @@ class Count {
     switch (valueName) {
       case "SlideStartAlchocol":
         resultGlobal = slideStartAlchocol;
-
         break;
       case "SliderAlchocolMain":
         resultGlobal = sliderAlchocolMain;
@@ -21,4 +20,7 @@ class Count {
         break;
     }
   }
+
+  static var howCountLocal;
+  static var countSliderLocal;
 }

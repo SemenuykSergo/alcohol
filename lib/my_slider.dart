@@ -1,6 +1,5 @@
 import 'package:alcohol_dilution_calculator/count.dart';
-
-import 'package:alcohol_dilution_calculator/text_model.dart';
+import 'package:alcohol_dilution_calculator/method/switch_alcohol_value.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -121,27 +120,9 @@ class _MySliderState extends State<MySlider> {
     if (countSlider < minSlide) {
       countSlider = minSlide;
     }
-
-    switch (valueName) {
-      case "SlideStartAlchocol":
-        Count.slideStartAlchocol = countSlider;
-        howCount = Count.slideStartAlchocol;
-        result = Count.slideStartAlchocol;
-        ModelValue.textModelValue.textRemove();
-        break;
-      case "SliderAlchocolMain":
-        Count.sliderAlchocolMain = countSlider;
-        howCount = Count.sliderAlchocolMain;
-        result = Count.sliderAlchocolMain;
-        ModelValue.textModelValue.textRemove();
-        break;
-      case "SliderAlchocolEnd":
-        Count.sliderAlchocolEnd = countSlider;
-        howCount = Count.sliderAlchocolEnd;
-        result = Count.sliderAlchocolEnd;
-        ModelValue.textModelValue.textRemove();
-        break;
-    }
+    switchAlcoholValue(howCount, countSlider, valueName);
+    howCount = Count.howCountLocal;
+    countSlider = Count.countSliderLocal;
   }
 
   void buttonAdd() {
@@ -149,50 +130,15 @@ class _MySliderState extends State<MySlider> {
     if (countSlider > maxSlide) {
       countSlider = maxSlide;
     }
-    switch (valueName) {
-      case "SlideStartAlchocol":
-        Count.slideStartAlchocol = countSlider;
-        howCount = Count.slideStartAlchocol;
-        result = Count.slideStartAlchocol;
-        ModelValue.textModelValue.textRemove();
-        break;
-      case "SliderAlchocolMain":
-        Count.sliderAlchocolMain = countSlider;
-        howCount = Count.sliderAlchocolMain;
-        result = Count.sliderAlchocolMain;
-        ModelValue.textModelValue.textRemove();
-        break;
-      case "SliderAlchocolEnd":
-        Count.sliderAlchocolEnd = countSlider;
-        howCount = Count.sliderAlchocolEnd;
-        result = Count.sliderAlchocolEnd;
-        ModelValue.textModelValue.textRemove();
-        break;
-    }
+    switchAlcoholValue(howCount, countSlider, valueName);
+    howCount = Count.howCountLocal;
+    countSlider = Count.countSliderLocal;
   }
 
   void sliderChange(value) {
     countSlider = value;
-
-    switch (valueName) {
-      case "SlideStartAlchocol":
-        Count.slideStartAlchocol = countSlider;
-        howCount = Count.slideStartAlchocol;
-        result = Count.slideStartAlchocol;
-        ModelValue.textModelValue.textRemove();
-        break;
-      case "SliderAlchocolMain":
-        Count.sliderAlchocolMain = countSlider;
-        howCount = Count.sliderAlchocolMain;
-        result = Count.sliderAlchocolMain;
-        ModelValue.textModelValue.textRemove();
-        break;
-      case "SliderAlchocolEnd":
-        Count.sliderAlchocolEnd = countSlider;
-        howCount = Count.sliderAlchocolEnd;
-        result = Count.sliderAlchocolEnd;
-        ModelValue.textModelValue.textRemove();
-        break;
-    }
+    switchAlcoholValue(howCount, countSlider, valueName);
+    howCount = Count.howCountLocal;
+    countSlider = Count.countSliderLocal;
   }
 }

@@ -2,6 +2,7 @@ import 'package:alcohol_dilution_calculator/text_model.dart';
 import 'package:alcohol_dilution_calculator/theme.dart';
 import 'package:alcohol_dilution_calculator/widget/addTextResultWidget.dart';
 import 'package:alcohol_dilution_calculator/widget/slideStartAlchocolWidget.dart';
+import 'package:alcohol_dilution_calculator/widget/sliderAlcoholEndWidget.dart';
 import 'package:alcohol_dilution_calculator/widget/sliderSliderAlchocolMainWidget.dart';
 
 import 'package:flutter/material.dart';
@@ -24,30 +25,45 @@ class MyApp extends StatelessWidget {
             ),
             body: SafeArea(
               //! наблюдаем
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 75,
-                  ),
-                  ScopedModelDescendant<TextModel>(
-                      builder: (context, child, model) {
-                    return SlideStartAlcoholWidget();
-                  }),
-                  SizedBox(
-                    height: 75,
-                  ),
-                  ScopedModelDescendant<TextModel>(
-                      builder: (context, child, model) {
-                    return SliderAlchocolMainWidget();
-                  }),
-                  SizedBox(
-                    height: 75,
-                  ),
-                  ScopedModelDescendant<TextModel>(
-                      builder: (context, child, model) {
-                    return AddTextResultWidget();
-                  }),
-                ],
+              child: Container(
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Color(0xffb58a8a), Color(0xff563434)],
+                )),
+                child: Column(
+                  children: [
+                    /* SizedBox(
+                      height: 25,
+                    ), */
+                    ScopedModelDescendant<TextModel>(
+                        builder: (context, child, model) {
+                      return SlideStartAlcoholWidget();
+                    }),
+                    /* SizedBox(
+                      height: 25,
+                    ), */
+                    ScopedModelDescendant<TextModel>(
+                        builder: (context, child, model) {
+                      return SliderAlchocolMainWidget();
+                    }),
+                    /* SizedBox(
+                      height: 25,
+                    ), */
+                    ScopedModelDescendant<TextModel>(
+                        builder: (context, child, model) {
+                      return SliderAlchocolEndWidget();
+                    }),
+                    /* SizedBox(
+                      height: 25,
+                    ), */
+                    ScopedModelDescendant<TextModel>(
+                        builder: (context, child, model) {
+                      return AddTextResultWidget();
+                    }),
+                  ],
+                ),
               ),
             )),
       ),
