@@ -1,8 +1,9 @@
 import 'package:alcohol_dilution_calculator/text_model.dart';
 import 'package:alcohol_dilution_calculator/theme.dart';
-import 'package:alcohol_dilution_calculator/widget.dart/addTextResultWidget.dart';
-import 'package:alcohol_dilution_calculator/widget.dart/slideStartAlchocolWidget.dart';
-import 'package:alcohol_dilution_calculator/widget.dart/sliderSliderAlchocolMainWidget.dart';
+import 'package:alcohol_dilution_calculator/widget/addTextResultWidget.dart';
+import 'package:alcohol_dilution_calculator/widget/slideStartAlchocolWidget.dart';
+import 'package:alcohol_dilution_calculator/widget/sliderSliderAlchocolMainWidget.dart';
+
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 

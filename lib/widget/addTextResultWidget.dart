@@ -9,8 +9,7 @@ class AddTextResultWidget extends StatelessWidget {
       ((Count.slideStartAlchocol + Count.sliderAlchocolMain) * 100).round() /
           100;
 
-  // var _textModel = TextModel();
-  //! здесь, скорее нужно исправить, как в предыдущих классах, а вообще обращаться напрямую,как в MyApp.
+  //! изменить формулу
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +17,13 @@ class AddTextResultWidget extends StatelessWidget {
       model: ModelValue.textModelValue,
       child: Column(children: [
         new ScopedModelDescendant<TextModel>(
-            builder: (context, child, model) => new Text('$_result')),
+            builder: (context, child, model) => new Text(
+                  '$_result',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                )),
       ]),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:alcohol_dilution_calculator/count.dart';
+
 import 'package:alcohol_dilution_calculator/text_model.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,6 @@ class MySlider extends StatefulWidget {
   double maxSlide;
   int division;
   String valueName;
-  //double result = 10; //! значение должно быть середина слайдера.
 
   MySlider(
       {this.countSlider,
@@ -41,7 +41,7 @@ class _MySliderState extends State<MySlider> {
   double maxSlide;
   int division;
   String valueName;
-  double result = 10;
+  double result;
 
   _MySliderState(
       {this.countSlider,
@@ -53,6 +53,9 @@ class _MySliderState extends State<MySlider> {
       this.valueName});
   @override
   Widget build(BuildContext context) {
+    Count().resultGlobalMethod(valueName);
+    result = Count.resultGlobal;
+
     Widget buttonAddWidget = FloatingActionButton(
       onPressed: () {
         setState(() {
@@ -83,13 +86,34 @@ class _MySliderState extends State<MySlider> {
     );
 
     return Container(
-        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-      buttonAddWidget,
-      sliderChangeWidget,
-      buttonRemoveWidget,
-      SizedBox(width: 25),
-      Text('${(result * 100).round() / 100}'), //!  тект выше слайдера перенести
-    ]));
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Column(
+            children: [
+              Center(
+                child: Container(
+                  child: Text(
+                    '${(result * 100).round() / 100}',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+              Row(
+                children: [
+                  buttonAddWidget,
+                  sliderChangeWidget,
+                  buttonRemoveWidget,
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 
   void buttonRemove() {
