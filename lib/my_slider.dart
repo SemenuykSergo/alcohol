@@ -61,7 +61,11 @@ class _MySliderState extends State<MySlider> {
           buttonRemove();
         });
       },
-      child: Icon(Icons.remove),
+      child: Icon(
+        Icons.remove,
+        color: Colors.black,
+        size: 30.0,
+      ),
     );
 
     Widget sliderChangeWidget = Slider(
@@ -81,7 +85,11 @@ class _MySliderState extends State<MySlider> {
           buttonAdd();
         });
       },
-      child: Icon(Icons.add),
+      child: Icon(
+        Icons.add,
+        color: Colors.black,
+        size: 30.0,
+      ),
     );
 
     return Container(
@@ -104,7 +112,7 @@ class _MySliderState extends State<MySlider> {
               Row(
                 children: [
                   buttonAddWidget,
-                  sliderChangeWidget,
+                  Container(width: 300, child: sliderChangeWidget),
                   buttonRemoveWidget,
                 ],
               ),

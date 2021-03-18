@@ -21,17 +21,18 @@ class MyApp extends StatelessWidget {
         theme: basicTheme(),
         home: Scaffold(
             appBar: AppBar(
-              title: Text('TEST'),
+              title: Text('Калькулятор разбавления спирта'),
             ),
             body: SafeArea(
               //! наблюдаем
               child: Container(
                 decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Color(0xffb58a8a), Color(0xff563434)],
-                )),
+                  color: Color.fromRGBO(224, 224, 224, 1),
+                  //gradient: LinearGradient(
+                  //begin: Alignment.topCenter,
+                  //end: Alignment.bottomCenter,
+                  //colors: [Color(0xffb58a8a), Color(0xff563434)],
+                ), //),
                 child: Column(
                   children: [
                     /* SizedBox(

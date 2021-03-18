@@ -10,11 +10,13 @@ class SlideStartAlcoholWidget extends StatelessWidget {
       height: 150,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [Color(0xff9ca79b), Color(0xff1a1e19)],
-        ),
+        border: Border.all(width: 1.0, color: Color.fromRGBO(112, 112, 112, 1)),
+        color: Color.fromRGBO(207, 207, 207, 1),
+        //gradient: LinearGradient(
+        // begin: Alignment.topCenter,
+        // end: Alignment.bottomCenter,
+        // colors: [Color(0xff9ca79b), Color(0xff1a1e19)],
+        //),
       ),
       child: MySlider(
         countSlider: 5,
