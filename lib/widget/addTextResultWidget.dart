@@ -24,26 +24,25 @@ class AddTextResultWidget extends StatelessWidget {
                   margin: EdgeInsets.all(10),
                   width: 460,
                   height: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    border: Border.all(
-                        width: 1.0, color: Color.fromRGBO(112, 112, 112, 1)),
-
-                    color: Color.fromRGBO(207, 207, 207, 1),
-                    // gradient: LinearGradient(
-                    //   begin: Alignment.topCenter,
-                    //  end: Alignment.bottomCenter,
-                    //  colors: [Color(0xff9ca79b), Color(0xff1a1e19)],
-
-                    // ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      '$_result',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
+                  child: Container(
+                    child: Column(
+                      children: [
+                        Center(
+                          child: Text('Итог'),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Center(
+                          child: Text(
+                            '$_result',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 )),

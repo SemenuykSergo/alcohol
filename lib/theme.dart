@@ -1,27 +1,33 @@
+import 'package:alcohol_dilution_calculator/const_theme.dart';
 import 'package:flutter/material.dart';
 
 ThemeData basicTheme() => ThemeData(
-    primaryColor: Color.fromRGBO(141, 141, 141, 1),
-    accentColor: Color.fromRGBO(112, 112, 112, 0.4),
-    sliderTheme: SliderThemeData.fromPrimaryColors(
-      primaryColor: Color.fromRGBO(112, 112, 112, 1),
-      primaryColorDark: Color.fromRGBO(112, 112, 112, 1),
-      primaryColorLight: Color.fromRGBO(112, 112, 112, 1),
-      valueIndicatorTextStyle: TextStyle(),
-    ),
-    textTheme: TextTheme(
-      bodyText1: TextStyle(
-          color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
-    ),
-    appBarTheme: AppBarTheme(
+      accentColor: ConstColor.colorBlack,
+      sliderTheme: SliderThemeData.fromPrimaryColors(
+        primaryColor: ConstColor.colorYellow,
+        primaryColorDark: ConstColor.colorYellow,
+        primaryColorLight: ConstColor.colorYellow,
+        valueIndicatorTextStyle: TextStyle(),
+      ),
       textTheme: TextTheme(
-        headline6: TextStyle(
-          color: Colors.black,
-          fontSize: 24,
+        bodyText1: TextStyle(
+          color: ConstColor.colorYellow,
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
+        bodyText2: TextStyle(
+          color: ConstColor.colorYellow,
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
         ),
       ),
-    ),
-    iconTheme: IconThemeData(
-      color: Colors.amber,
-      size: 18.0,
-    ));
+      appBarTheme: AppBarTheme(
+        backgroundColor: ConstColor.colorBlack,
+        textTheme: TextTheme(
+          headline6: TextStyle(
+            color: ConstColor.colorYellow,
+            fontSize: 26,
+          ),
+        ),
+      ),
+    );

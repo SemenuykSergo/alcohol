@@ -1,3 +1,4 @@
+import 'package:alcohol_dilution_calculator/const_theme.dart';
 import 'package:alcohol_dilution_calculator/count.dart';
 import 'package:alcohol_dilution_calculator/method/switch_alcohol_value.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +64,7 @@ class _MySliderState extends State<MySlider> {
       },
       child: Icon(
         Icons.remove,
-        color: Colors.black,
+        color: ConstColor.colorYellow,
         size: 30.0,
       ),
     );
@@ -87,7 +88,7 @@ class _MySliderState extends State<MySlider> {
       },
       child: Icon(
         Icons.add,
-        color: Colors.black,
+        color: ConstColor.colorYellow,
         size: 30.0,
       ),
     );
@@ -98,6 +99,14 @@ class _MySliderState extends State<MySlider> {
         children: [
           Column(
             children: [
+              Center(
+                child: Container(
+                  child: Text('$valueName'), //! заменить  название
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
               Center(
                 child: Container(
                   child: Text(
