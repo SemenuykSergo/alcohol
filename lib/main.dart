@@ -1,6 +1,6 @@
-import 'package:alcohol_dilution_calculator/const_theme.dart';
+import 'package:alcohol_dilution_calculator/theme/const_theme.dart';
 import 'package:alcohol_dilution_calculator/text_model.dart';
-import 'package:alcohol_dilution_calculator/theme.dart';
+import 'package:alcohol_dilution_calculator/theme/theme.dart';
 import 'package:alcohol_dilution_calculator/widget/addTextResultWidget.dart';
 import 'package:alcohol_dilution_calculator/widget/slideStartAlchocolWidget.dart';
 import 'package:alcohol_dilution_calculator/widget/sliderAlcoholEndWidget.dart';

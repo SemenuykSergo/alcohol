@@ -1,4 +1,4 @@
-import 'package:alcohol_dilution_calculator/const_theme.dart';
+import 'package:alcohol_dilution_calculator/theme/const_theme.dart';
 import 'package:flutter/material.dart';
 
 ThemeData basicTheme() => ThemeData(
