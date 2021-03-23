@@ -12,6 +12,7 @@ class MySlider extends StatefulWidget {
   double maxSlide;
   int division;
   String valueName;
+  String title;
 
   MySlider(
       {this.countSlider,
@@ -20,7 +21,8 @@ class MySlider extends StatefulWidget {
       this.minSlide,
       this.maxSlide,
       this.division,
-      this.valueName});
+      this.valueName,
+      this.title});
 
   @override
   _MySliderState createState() => _MySliderState(
@@ -30,7 +32,8 @@ class MySlider extends StatefulWidget {
       minSlide: minSlide,
       maxSlide: maxSlide,
       division: division,
-      valueName: valueName);
+      valueName: valueName,
+      title: title);
 }
 
 class _MySliderState extends State<MySlider> {
@@ -41,6 +44,7 @@ class _MySliderState extends State<MySlider> {
   double maxSlide;
   int division;
   String valueName;
+  String title;
   double result;
 
   _MySliderState(
@@ -50,7 +54,8 @@ class _MySliderState extends State<MySlider> {
       this.minSlide,
       this.maxSlide,
       this.division,
-      this.valueName});
+      this.valueName,
+      this.title});
   @override
   Widget build(BuildContext context) {
     Count().resultGlobalMethod(valueName);
@@ -101,7 +106,7 @@ class _MySliderState extends State<MySlider> {
             children: [
               Center(
                 child: Container(
-                  child: Text('$valueName'), //! заменить  название
+                  child: Text('$title'), //! заменить  название
                 ),
               ),
               SizedBox(

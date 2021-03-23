@@ -9,13 +9,14 @@ class SliderAlchocolEndWidget extends StatelessWidget {
       padding: EdgeInsets.only(top: 25),
       height: 150,
       child: MySlider(
-        countSlider: 25,
-        howCount: 25,
+        countSlider: 45,
+        howCount: 45,
         stepCount: 0.1,
         minSlide: 20,
-        maxSlide: 30,
-        division: 10,
+        maxSlide: 70,
+        division: 20,
         valueName: "SliderAlchocolEnd",
+        title: "Конечная крепость, %",
       ),
     );
   }

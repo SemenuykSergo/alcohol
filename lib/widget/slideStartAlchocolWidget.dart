@@ -9,13 +9,14 @@ class SlideStartAlcoholWidget extends StatelessWidget {
       padding: EdgeInsets.only(top: 25),
       height: 150,
       child: MySlider(
-        countSlider: 5,
-        howCount: 5,
+        countSlider: 70,
+        howCount: 70,
         stepCount: 0.1,
-        minSlide: 0,
-        maxSlide: 10,
-        division: 10,
+        minSlide: 45,
+        maxSlide: 97,
+        division: 20,
         valueName: "SlideStartAlchocol",
+        title: "Начальная крепость спирта, %",
       ),
     );
   }

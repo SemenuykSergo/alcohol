@@ -5,14 +5,15 @@ import 'package:scoped_model/scoped_model.dart';
 
 // ignore: must_be_immutable
 class AddTextResultWidget extends StatelessWidget {
-  double _result = ((Count.slideStartAlchocol +
-                  Count.sliderAlchocolMain +
-                  Count.sliderAlchocolEnd) *
+  double _result = ((Count.slideStartAlchocol *
+                      Count.sliderAlchocolMain /
+                      Count.sliderAlchocolEnd -
+                  Count.sliderAlchocolMain) *
               100)
           .round() /
       100;
 
-  //! изменить формулу
+  //! проверить формулу
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +29,12 @@ class AddTextResultWidget extends StatelessWidget {
                     child: Column(
                       children: [
                         Center(
-                          child: Text('Итог'),
+                          child: Text('Необходимое для разведения '),
                         ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(' количество воды, мл'),
                         SizedBox(
                           height: 10,
                         ),
@@ -38,7 +43,7 @@ class AddTextResultWidget extends StatelessWidget {
                             '$_result',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 20,
+                              fontSize: 24,
                             ),
                           ),
                         ),
